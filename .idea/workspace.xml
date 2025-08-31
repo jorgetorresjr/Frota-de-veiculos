@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="291720f7-0d2a-40e5-968f-46f615060062" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/controller/FrotaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/command/CommandVeiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/repository/VeiculoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/service/FrotaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/command/DevolverVeiculoCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/command/RegistrarManutencaoCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/command/ReservarVeiculoCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/state/Disponivel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/state/EstadoVeiculo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/state/Manutencao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/state/Reservado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/controller/FrotaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/controller/FrotaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/model/Veiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/command/CommandVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/model/command/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/state/VeiculoState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/model/state/Alugado.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +27,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -39,6 +49,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.SistemaFrotaLocadoraApplication.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -50,7 +61,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/jorge/Desktop/Programacao/Java/Sistema de Ger. de Veiculos/src/main/java/org",
-    "last_opened_file_path": "C:/Users/jorge/Desktop/Programacao/Java/Sistema_de_Ger_de_Veiculos",
+    "last_opened_file_path": "C:/Users/Clara Alves/Downloads/Projeto-ppoo/Projeto-PPOO",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,14 +80,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

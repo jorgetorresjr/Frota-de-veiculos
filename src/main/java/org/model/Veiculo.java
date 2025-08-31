@@ -1,19 +1,19 @@
 package org.model;
 
 import org.model.observer.Observer;
-import org.model.state.VeiculoState;
+import org.model.state.EstadoVeiculo;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Veiculo {
     private String placa;
-    private VeiculoState state;
+    private EstadoVeiculo estado;
     private List<Observer> observers = new ArrayList<>();
 
-    public Veiculo(String placa, VeiculoState state) {
+    public Veiculo(String placa, EstadoVeiculo estado) {
         this.placa = placa;
-        this.state = state;
+        this.estado = estado;
     }
 
     public String getPlaca() {
@@ -24,13 +24,16 @@ public class Veiculo {
         this.placa = placa;
     }
 
-    public VeiculoState getState() {
-        return state;
+    public EstadoVeiculo getEstado() {
+        return estado;
     }
 
-    public void setState(VeiculoState state) {
-        this.state = state;
+    public void setEstado(EstadoVeiculo estado) {
+        this.estado = estado;
+        notifyObservers("O veículo " + placa + " mudou para o estado: " + estado.getNome());
     }
+
+    public void avancarEstado() { estado.avancarEstado(this); }
 
     public void addObserver(Observer observer) {
         observers.add(observer);
