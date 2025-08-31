@@ -1,7 +1,7 @@
-package org.model;
+package org.veiculos.model.entities;
 
-import org.model.observer.Observer;
-import org.model.state.VeiculoState;
+import org.veiculos.model.observer.Observer;
+import org.veiculos.model.state.VeiculoState;
 
 import java.util.ArrayList;
 import java.util.List;
