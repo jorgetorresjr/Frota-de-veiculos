@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Frota de Veículos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center bg-dark text-white p-3 rounded mb-4">
+        <h3 class="m-0">Frota de Veículos</h3>
+        <div>
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalAdicionar">Adicionar Veículo</button>
+        </div>
+    </div>
+
+    <div id="listar">
+        <h4>Lista de Veículos</h4>
+        <table class="table table-bordered" id="tabelaVeiculos">
+            <thead>
+            <tr>
+                <th>Placa</th>
+                <th>Modelo</th>
+                <th>Estado</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="modalAdicionar" tabindex="-1" aria-labelledby="modalAdicionarLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAdicionarLabel">Adicionar Veículo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formAdicionar">
+                    <div class="mb-3">
+                        <label for="modelo" class="form-label">Modelo</label>
+                        <input type="text" class="form-control" id="modelo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="placa" class="form-label">Placa</label>
+                        <input type="text" class="form-control" id="placa" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Adicionar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const apiBase = 'http://localhost:8080/veiculos';
+
+    async function carregarVeiculos() {
+        try {
+            const res = await fetch(apiBase);
+            if (!res.ok) throw new Error('Falha ao carregar veículos');
+            const veiculos = await res.json();
+            const tbody = document.querySelector("#tabelaVeiculos tbody");
+            tbody.innerHTML = "";
+            veiculos.forEach(v => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                <td>${v.placa}</td>
+                <td>${v.modelo}</td>
+                <td>${v.estado?.nome || 'Desconhecido'}</td>
+                <td>
+                    <button class="btn btn-sm btn-warning" onclick="reservar('${v.placa}')">Reservar</button>
+                    <button class="btn btn-sm btn-primary" onclick="alugar('${v.placa}')">Alugar</button>
+                    <button class="btn btn-sm btn-success" onclick="devolver('${v.placa}')">Devolver</button>
+                    <button class="btn btn-sm btn-secondary" onclick="manutencao('${v.placa}')">Manutenção</button>
+                    <button class="btn btn-sm btn-info" onclick="avancar('${v.placa}')">Avançar Estado</button>
+                    <button class="btn btn-sm btn-danger" onclick="remover('${v.placa}')">Remover</button>
+                </td>
+            `;
+                tbody.appendChild(tr);
+            });
+        } catch (err) {
+            console.error(err);
+            alert('Erro ao carregar veículos. Veja o console.');
+        }
+    }
+
+
+    async function adicionar(event) {
+        event.preventDefault();
+        const modelo = document.getElementById("modelo").value;
+        const placa = document.getElementById("placa").value;
+
+        await fetch(apiBase, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ modelo, placa })
+        });
+
+        document.getElementById("formAdicionar").reset();
+        const modal = bootstrap.Modal.getInstance(document.getElementById("modalAdicionar"));
+        modal.hide();
+        carregarVeiculos();
+    }
+
+    async function reservar(placa) { await fetch(`${apiBase}/${placa}/reservar`, { method: "POST" }); carregarVeiculos(); }
+    async function alugar(placa) { await fetch(`${apiBase}/${placa}/alugar`, { method: "POST" }); carregarVeiculos(); }
+    async function devolver(placa) { await fetch(`${apiBase}/${placa}/devolver`, { method: "POST" }); carregarVeiculos(); }
+    async function manutencao(placa) { await fetch(`${apiBase}/${placa}/manutencao`, { method: "POST" }); carregarVeiculos(); }
+    async function avancar(placa) { await fetch(`${apiBase}/${placa}/avancar`, { method: "POST" }); carregarVeiculos(); }
+    async function remover(placa) { await fetch(`${apiBase}/${placa}`, { method: "DELETE" }); carregarVeiculos(); }
+
+    document.getElementById("formAdicionar").addEventListener("submit", adicionar);
+    carregarVeiculos();
+</script>
+</body>
+</html>

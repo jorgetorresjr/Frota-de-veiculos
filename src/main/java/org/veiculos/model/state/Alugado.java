@@ -12,4 +12,9 @@ public class Alugado implements EstadoVeiculo{
     public String getNome() {
         return "Alugado";
     }
+
+    @Override
+    public String getMensagem(Veiculo veiculo) {
+        return "Veículo " + veiculo.getModelo() + " - placa " + veiculo.getPlaca() + " está alugado.";
+    }
 }

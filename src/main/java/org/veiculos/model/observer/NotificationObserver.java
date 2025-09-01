@@ -9,6 +9,6 @@ public class NotificationObserver implements Observer {
 
     @Override
     public void update(String mensagem) {
-        System.out.println("Notificando grupoo " + grupo + " " + mensagem);
+        System.out.println("Notificando grupo [" + grupo + "]: " + mensagem);
     }
 }

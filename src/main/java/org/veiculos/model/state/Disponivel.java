@@ -13,4 +13,9 @@ public class Disponivel implements EstadoVeiculo{
     public String getNome() {
         return "Disponível";
     }
+
+    @Override
+    public String getMensagem(Veiculo veiculo) {
+        return "Veiculo " + veiculo.getModelo() + " - placa " + veiculo.getPlaca() + " está disponível";
+    }
 }

@@ -13,4 +13,9 @@ public class Manutencao implements EstadoVeiculo{
     public String getNome() {
         return "Em Manutenção";
     }
+
+    @Override
+    public String getMensagem(Veiculo veiculo) {
+        return "Veiculo " + veiculo.getModelo() + " - placa " + veiculo.getPlaca() + " entrou em manutenção";
+    }
 }

@@ -1,20 +1,26 @@
 package org.veiculos.repository;
 
+import org.springframework.stereotype.Repository;
 import org.veiculos.model.entities.Veiculo;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class VeiculoRepository {
     private List<Veiculo> veiculos = new ArrayList<>();
 
-    public void criar(Veiculo veiculo) {
+    public boolean criar(Veiculo veiculo) {
+        if (buscar(veiculo.getPlaca()) != null) {
+            return false;
+        }
         veiculos.add(veiculo);
+        return true;
     }
 
 
-    public void remover(Veiculo veiculo) {
-        veiculos.remove(veiculo);
+    public boolean remover(Veiculo veiculo) {
+        return veiculos.remove(veiculo);
     }
 
     public Veiculo buscar(String placa) {
@@ -27,6 +33,6 @@ public class VeiculoRepository {
     }
 
     public List<Veiculo> listar() {
-        return veiculos;
+        return new ArrayList<>(veiculos);
     }
 }

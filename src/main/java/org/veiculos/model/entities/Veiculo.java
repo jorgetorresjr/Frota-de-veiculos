@@ -1,5 +1,6 @@
 package org.veiculos.model.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.veiculos.model.observer.Observer;
 import org.veiculos.model.state.Disponivel;
 import org.veiculos.model.state.EstadoVeiculo;
@@ -11,7 +12,11 @@ public class Veiculo {
     private String placa;
     private EstadoVeiculo estado;
     private String modelo;
+
+    @JsonIgnore
     private List<Observer> observers = new ArrayList<>();
+
+    public Veiculo() {}
 
     public Veiculo(String modelo, String placa) {
         this.placa = placa;
@@ -45,7 +50,7 @@ public class Veiculo {
     }
 
     public List<Observer> getObservers() {
-        return observers;
+        return new ArrayList<>(observers);
     }
 
     public void setObservers(List<Observer> observers) {
@@ -55,7 +60,13 @@ public class Veiculo {
     public void avancarEstado() { estado.avancarEstado(this); }
 
     public void addObserver(Observer observer) {
-        observers.add(observer);
+        if (!observers.contains(observer)) {
+            observers.add(observer);
+        }
+    }
+
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
     }
 
     public void notifyObservers(String mensagem) {
