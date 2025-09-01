@@ -4,102 +4,74 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="291720f7-0d2a-40e5-968f-46f615060062" name="Changes" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/commands/CommandVeiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/controller/FrotaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/entities/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/entities/Reserva.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/observer/ClienteObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/observer/ReservaSubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/observer/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/observer/VeiculoSubject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/application/SistemaFrotaLocadoraApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/SistemaFrotaLocadoraApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/controller/FrotaController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/entities/Veiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/command/CommandVeiculo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/observer/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/observer/Observer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/state/VeiculoState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/state/VeiculoState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/repository/VeiculoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/repository/VeiculoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/service/FrotaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/service/FrotaService.java" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/command/DevolverVeiculoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/command/RegistrarManutencaoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/command/ReservarVeiculoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/state/Disponivel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/state/EstadoVeiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/state/Manutencao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/state/Reservado.java" afterDir="false" />
+    <list default="true" id="75820d2a-de76-4661-bef3-c1188d795164" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/controller/FrotaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/controller/FrotaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/model/Veiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/command/CommandVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/model/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/state/VeiculoState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/model/state/Alugado.java" afterDir="false" />
->>>>>>> 8cbdb1f9e78872083253a635486fd12362eecf3f
+      <change beforePath="$PROJECT_DIR$/Projeto-PPOO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/controller/FrotaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/state/Alugado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/state/Alugado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/state/Disponivel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/state/Disponivel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/state/EstadoVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/state/EstadoVeiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/state/Manutencao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/state/Manutencao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/model/state/Reservado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/state/Reservado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/veiculos/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/veiculos/commands/DevolverVeiculoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/commands/DevolverVeiculoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/veiculos/commands/RegistrarManutencaoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/commands/RegistrarManutencaoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/veiculos/commands/ReservarVeiculoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/commands/ReservarVeiculoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/veiculos/controller/FrotaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/controller/FrotaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/veiculos/model/entities/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/veiculos/model/entities/Reserva.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/veiculos/model/entities/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/entities/Veiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/veiculos/model/observer/ClienteObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/observer/NotificationObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/veiculos/model/observer/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/model/observer/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/veiculos/model/observer/ReservaSubject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/veiculos/repository/VeiculoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/veiculos/repository/VeiculoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/veiculos/service/FrotaService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="31AQEJakOu0N7Py4qdbqQOkzIH5" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="3251aMF2UHrNZHLs0Xue7GDUlYb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.SistemaFrotaLocadoraApplication.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.SistemaFrotaLocadoraApplication (1).executor": "Run",
-    "Spring Boot.SistemaFrotaLocadoraApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/jorge/Desktop/Programacao/Java/Sistema de Ger. de Veiculos/src/main/java/org",
-<<<<<<< HEAD
-    "last_opened_file_path": "C:/Users/jorge/Desktop/Projetos/Java/GerenciamentoDeVeiculos",
-=======
-    "last_opened_file_path": "C:/Users/Clara Alves/Downloads/Projeto-ppoo/Projeto-PPOO",
->>>>>>> 8cbdb1f9e78872083253a635486fd12362eecf3f
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/jorge/Desktop/Programacao/Java/PPOO/src/main/java/org/prova1/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.SistemaFrotaLocadoraApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration name="SistemaFrotaLocadoraApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+    <configuration name="SistemaFrotaLocadoraApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="sistema-frota-locadora" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.veiculos.SistemaFrotaLocadoraApplication" />
       <method v="2">
@@ -107,40 +79,28 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="291720f7-0d2a-40e5-968f-46f615060062" name="Changes" comment="" />
-      <created>1754964287397</created>
+      <changelist id="75820d2a-de76-4661-bef3-c1188d795164" name="Changes" comment="" />
+      <created>1756678198530</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1754964287397</updated>
-      <workItem from="1754964288617" duration="6000" />
-      <workItem from="1756087868108" duration="623000" />
-      <workItem from="1756088507587" duration="1521000" />
-      <workItem from="1756090169061" duration="1660000" />
-      <workItem from="1756094787356" duration="301000" />
-      <workItem from="1756095375015" duration="410000" />
-      <workItem from="1756253363842" duration="31000" />
-      <workItem from="1756662932806" duration="4179000" />
-      <workItem from="1756671156960" duration="1537000" />
-      <workItem from="1756673197631" duration="108000" />
-      <workItem from="1756673317423" duration="1424000" />
+      <updated>1756678198530</updated>
+      <workItem from="1756678201529" duration="1979000" />
+      <workItem from="1756695688005" duration="3994000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/prova1/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

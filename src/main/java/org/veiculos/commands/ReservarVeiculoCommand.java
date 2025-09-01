@@ -1,10 +1,10 @@
-package org.model.command;
+package org.veiculos.commands;
 
-import org.model.Veiculo;
-import org.model.state.Reservado;
+import org.veiculos.model.entities.Veiculo;
+import org.veiculos.model.state.Reservado;
 
 public class ReservarVeiculoCommand implements Command {
-    private Veiculo veiculo;
+    private org.veiculos.model.entities.Veiculo veiculo;
 
     public ReservarVeiculoCommand(Veiculo veiculo) {
         this.veiculo = veiculo;

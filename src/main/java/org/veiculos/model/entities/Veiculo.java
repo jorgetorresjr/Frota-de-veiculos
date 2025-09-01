@@ -1,12 +1,8 @@
 package org.veiculos.model.entities;
 
-<<<<<<< HEAD:src/main/java/org/veiculos/model/entities/Veiculo.java
 import org.veiculos.model.observer.Observer;
-import org.veiculos.model.state.VeiculoState;
-=======
-import org.model.observer.Observer;
-import org.model.state.EstadoVeiculo;
->>>>>>> 8cbdb1f9e78872083253a635486fd12362eecf3f:src/main/java/org/model/Veiculo.java
+import org.veiculos.model.state.Disponivel;
+import org.veiculos.model.state.EstadoVeiculo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,11 +10,13 @@ import java.util.List;
 public class Veiculo {
     private String placa;
     private EstadoVeiculo estado;
+    private String modelo;
     private List<Observer> observers = new ArrayList<>();
 
-    public Veiculo(String placa, EstadoVeiculo estado) {
+    public Veiculo(String modelo, String placa) {
         this.placa = placa;
-        this.estado = estado;
+        this.modelo = modelo;
+        this.estado = new Disponivel();
     }
 
     public String getPlaca() {
@@ -35,7 +33,23 @@ public class Veiculo {
 
     public void setEstado(EstadoVeiculo estado) {
         this.estado = estado;
-        notifyObservers("O veículo " + placa + " mudou para o estado: " + estado.getNome());
+        notifyObservers("O veículo " + modelo + " - placa: " + placa + " mudou para o estado: " + estado.getNome());
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public List<Observer> getObservers() {
+        return observers;
+    }
+
+    public void setObservers(List<Observer> observers) {
+        this.observers = observers;
     }
 
     public void avancarEstado() { estado.avancarEstado(this); }
@@ -49,4 +63,5 @@ public class Veiculo {
             observer.update(mensagem);
         }
     }
+
 }

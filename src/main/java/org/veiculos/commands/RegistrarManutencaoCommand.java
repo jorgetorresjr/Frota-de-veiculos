@@ -1,7 +1,7 @@
-package org.model.command;
+package org.veiculos.commands;
 
-import org.model.Veiculo;
-import org.model.state.Manutencao;
+import org.veiculos.model.entities.Veiculo;
+import org.veiculos.model.state.Manutencao;
 
 public class RegistrarManutencaoCommand implements Command {
     private Veiculo veiculo;

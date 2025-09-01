@@ -1,6 +1,7 @@
-package org.model.state;
-import org.model.Veiculo;
+package org.veiculos.model.state;
 
+
+import org.veiculos.model.entities.Veiculo;
 
 public class Disponivel implements EstadoVeiculo{
     @Override

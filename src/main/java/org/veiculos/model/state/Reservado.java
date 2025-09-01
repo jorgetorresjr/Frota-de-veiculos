@@ -1,6 +1,6 @@
-package org.model.state;
+package org.veiculos.model.state;
 
-import org.model.Veiculo;
+import org.veiculos.model.entities.Veiculo;
 
 public class Reservado implements EstadoVeiculo{
     @Override
